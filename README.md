@@ -86,3 +86,87 @@ apabila file.log tidak ditemukan, maka akan muncul pesan error:
 ```
 [Errno 2] No such file or directory: 'file.log'
 ```
+
+## File Handling
+
+* Penanganan file adalah bagian penting dari
+aplikasi apa pun.
+* Python memiliki beberapa fungsi untuk
+membuat, membaca, memperbarui, dan
+menghapus file.
+
+## File Open
+
+* Fungsi open() mengambil dua parameter; nama file, dan
+mode.
+* Ada empat metode (mode) berbeda untuk membuka file:
+* "r" - Read - Nilai default. Membuka file untuk membaca, error jika file
+tidak ada
+* "a" - Add - Membuka file untuk ditambahkan, membuat file jika tidak
+ada
+* "w" - Write - Membuka file untuk ditulis, membuat file jika tidak ada
+* "x" - Create - Membuat file yang ditentukan, mengembalikan kesalahan
+jika file tersebut ada
+
+## File Open
+
+* Syntax
+```
+f = open("demofile.txt")
+```
+* Atau
+```
+f = open("demofile.txt","rt")
+```
+
+## File Read
+
+* Syntax
+
+* Contoh
+```
+fileObject.read()
+```
+
+* Contoh
+```
+f = open("demofile.txt","r")
+print(f.read())
+```
+
+## Read Line
+
+* Mebaca file per baris
+* Syntax
+```
+fileObject.readline()
+```
+* Contoh
+```
+f = open("demofile.txt","r")
+print(f.readline())
+print(f.readline())
+```
+
+## File Write
+
+* Syntax
+* Contoh
+```
+fileObject.write("content")
+```
+Contoh : 
+```
+f = open("demofile.txt","a")
+f.write("Hello this is first line message")
+f.write("Hello this is 2nd line message")
+```
+Parameter:
+* "a" - Add - akan ditambahkan ke akhir file
+* "w" - Write - akan menimpa konten yang ada
+
+Contoh : 
+```
+f = open("demofile.txt","w")
+f.write("Woops! I have deleted the content!")
+```
